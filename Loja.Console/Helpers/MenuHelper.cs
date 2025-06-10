@@ -1,4 +1,5 @@
 ﻿using Loja.Shared.Contexts;
+using Loja.Shared.Models;
 using static System.Console;
 
 namespace Loja.Console.Helpers;
@@ -82,10 +83,10 @@ internal class MenuHelper
         var opcao = ReadLine();
         switch (opcao)
         {
-            case "1": break;
-            case "2": break;
-            case "3": break;
-            case "4": break;
+            case "1": ClienteHelper.Cadastrar(); break;
+            case "2": ClienteHelper.Listar(); break;
+            case "3": ClienteHelper.Editar(); break;
+            case "4": ClienteHelper.Excluir(); break;
         }
         MenuPrincipal();
     }
